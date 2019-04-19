@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Board List</title>
+</head>
+<body>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">No.</th>
+                <th scope="col">title</th>
+                <th scope="col">author</th>
+                <th scope="col">reg_date</th>
+                <th scope="col">counts</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for boardList in object_list %}
+                <tr>
+                    <td>{{ forloop.counter }}</td>
+                    <td>{{ boardList.title }}</td>
+                    <td>{{ boardList.author }}</td>
+                    <td>{{ boardList.reg_date }}</td>
+                    <td>{{ boardList.counts }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
